@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f57ca4;
+}
+
+.custom-navbar {
+    color: #ffffff;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar a {
+    color: #fcf9f9;
+    text-decoration: none;
+    padding: 0 10px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+#hero {
+    background-image: url('./imagenes/Portada1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(30, 30, 31);
+}
+
+.container-sm {
+    background-color: antiquewhite;
+}
+
+.btn {
+    background-color: white;
+    color: #ff69b4;
+    padding: 15px 25px;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+#servicios {
+    background-color: #ffe6f2;
+    padding: 40px;
+}
+
+.servicios-contenedor {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.servicio {
+    width: 30%;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.servicio img {
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.servicio:hover {
+    transform: scale(1.1);
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    #hero {
+        height: auto;
+        padding: 20px;
+    }
+
+    .servicios-contenedor {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .servicio {
+        width: 80%;
+    }
+}
+footer {
+    width: 100%; /* Abarca todo el ancho de la página */
+    background-color: #5f5d5d; /* Color de fondo del footer */
+    padding: 20px 0; /* Espaciado interno */
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+  }
+  @media (max-width: 600px) {
+    footer {
+      padding: 15px 0;
+      font-size: 14px;
+    }
+  
+    .social-icons img {
+      width: 25px; 
+      height: 25px;
+    }
+  }
+  @media (min-width: 601px) and (max-width: 1024px) {
+    footer {
+      padding: 18px 0; /* Ajusta el espaciado interno en tabletas */
+      font-size: 16px;
+    }
+  
+    .social-icons img {
+      width: 28px; /* Ajusta el tamaño de los iconos sociales */
+      height: 28px;
+    }
+  }
+  
+  /* Media query para pantallas grandes (escritorios) */
+  @media (min-width: 1025px) {
+    footer {
+      padding: 20px 0; /* Mantiene el espaciado interno en escritorios */
+      font-size: 18px; /* Ajusta el tamaño de la fuente */
+    }
+  
+    .social-icons img {
+      width: 30px; /* Mantiene el tamaño de los iconos sociales */
+      height: 30px;
+    }
+  }
+    
+  

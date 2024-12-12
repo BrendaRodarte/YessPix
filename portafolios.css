@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&display=swap');
+
+
+body {
+    background-color: #f8d5f2;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+h1 {
+    text-align: center;
+    font-family: "Libre Baskerville", serif;
+    font-size: 2.5em;
+    color: #4b0082;
+    margin: 40px 0;
+    opacity: 0; /* Inicialmente oculto */
+    transform: translateY(-20px); /* Desplazado hacia arriba */
+    animation: fadeInUp 1s forwards; /* Aplicar animación */
+}
+
+/* Animación */
+@keyframes fadeInUp {
+    to {
+        opacity: 1; /* Hacer visible */
+        transform: translateY(0); /* Regresar a la posición original */
+    }
+}
+
+.custom-navbar {
+    background-color: rgba(255, 105, 180, 0.9);
+    color: #ffffff;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+}
+
+.navbar-toggler {
+    border-color: #ff69b4;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ff69b4' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.navbar a {
+    color: #fcf9f9;
+    text-decoration: none;
+    padding: 0 10px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #f8d5e6;
+}
+
+#galeria {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* Galería */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.galeria-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galeria-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.galeria-item img,
+.galeria-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.galeria img{
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0 , .8));
+}
+
+/* Hover específico para imágenes */
+.galeria-item img:hover {
+    filter: brightness(80%);
+    transform: scale(1.1);
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Hover específico para video */
+.galeria-item.video:hover video {
+    transform: scale(1.1);
+    filter: brightness(70%);
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Video */
+.bg-video {
+    display: block;
+    border-radius: 10px;
+}
+
+/* Centrar el video */
+.galeria-item.video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: span 2; /* Haz que el video ocupe dos columnas en la cuadrícula */
+}
+
+
+.galeria-item.video video {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.galeria-item {
+    position: relative; /* Para posicionar la descripción */
+    overflow: hidden; /* Ocultar el desbordamiento */
+}
+
+.description {
+    position: absolute; /* Posicionar la descripción sobre la imagen */
+    bottom: 0; /* Posicionar en la parte inferior */
+    left: 0; /* Alinear a la izquierda */
+    right: 0; /* Alinear a la derecha */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+    color: white; /* Color del texto */
+    padding: 10px; /* Espaciado interno */
+    opacity: 0; /* Ocultar por defecto */
+    transition: opacity 0.3s ease; /* Transición suave */
+}
+
+.galeria-item:hover .description {
+    opacity: 1; /* Mostrar la descripción al pasar el cursor */
+}
+footer {
+    width: 100%; /* Abarca todo el ancho de la página */
+    background-color: #5f5d5d; /* Color de fondo del footer */
+    padding: 20px 0; /* Espaciado interno */
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+  }
+  @media (max-width: 600px) {
+    footer {
+      padding: 15px 0; /* Reduce el espaciado interno en móviles */
+      font-size: 14px; /* Ajusta el tamaño de la fuente */
+    }
+  
+    .social-icons img {
+      width: 25px; /* Reduce el tamaño de los iconos sociales */
+      height: 25px;
+    }
+  }
+  
+  /* Media query para pantallas medianas (tabletas) */
+  @media (min-width: 601px) and (max-width: 1024px) {
+    footer {
+      padding: 18px 0; /* Ajusta el espaciado interno en tabletas */
+      font-size: 16px; /* Ajusta el tamaño de la fuente */
+    }
+  
+    .social-icons img {
+      width: 28px; /* Ajusta el tamaño de los iconos sociales */
+      height: 28px;
+    }
+  }
+  
+  /* Media query para pantallas grandes (escritorios) */
+  @media (min-width: 1025px) {
+    footer {
+      padding: 20px 0; /* Mantiene el espaciado interno en escritorios */
+      font-size: 18px; /* Ajusta el tamaño de la fuente */
+    }
+  
+    .social-icons img {
+      width: 30px; /* Mantiene el tamaño de los iconos sociales */
+      height: 30px;
+    }
+  }
+
+/* Media Queries */
+
+
+/* Media Queries */
+@media (min-width: 1024px) {
+    .galeria {
+        grid-template-columns: repeat(4, 1fr); /* Cuatro columnas */
+    }
+}
+
+/* Para tabletas y pantallas medianas */
+@media (max-width: 768px) {
+    .galeria {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    }
+
+    .galeria-item {
+        margin-bottom: 15px; /* Espaciado inferior */
+    }
+
+    h1 {
+        font-size: 2rem; /* Reducir tamaño del h1 */
+    }
+}

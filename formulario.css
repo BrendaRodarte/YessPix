@@ -1,0 +1,209 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    margin: 0;
+    background-image: url(./imagenes/Portada1.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.main-content {
+    flex: 1;
+}
+
+    
+
+header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.custom-navbar {
+    background-color: #ff69b4; 
+    padding: 10px;
+}
+
+.seccionformulario {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: rgb(248, 199, 199);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 100px; /* Para evitar que el formulario se superponga con el header */
+}
+
+.field {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#button:hover {
+    background-color: #45a049;
+}
+footer {
+    width: 100%; /* Abarca todo el ancho de la página */
+    background-color: #5f5d5d; /* Color de fondo del footer */
+    padding: 20px 0; /* Espaciado interno */
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+  }
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons a {
+    color: white; /* Color de los íconos */
+    font-size: 30px; /* Tamaño de los íconos de Instagram y TikTok */
+    text-decoration: none;
+}
+
+.social-icons img {
+    width: 30px; /* Tamaño del ícono de WhatsApp */
+    height: 30px;
+}
+
+.social-icons a:hover {
+    color: #ff69b4; /* Color al pasar el mouse sobre los íconos */
+}
+.puff-in-center {
+	-webkit-animation: puff-in-center 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+	        animation: puff-in-center 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+}
+
+ @-webkit-keyframes puff-in-center {
+    0% {
+      -webkit-transform: scale(2);
+              transform: scale(2);
+      -webkit-filter: blur(4px);
+              filter: blur(4px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  @keyframes puff-in-center {
+    0% {
+      -webkit-transform: scale(2);
+              transform: scale(2);
+      -webkit-filter: blur(4px);
+              filter: blur(4px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  
+
+footer p {
+    color: white;
+    font-size: 14px;
+    margin-top: 10px;
+}
+@media (max-width: 768px) {
+    .seccionformulario {
+        width: 95%; /* Ampliar el ancho en pantallas más pequeñas */
+        padding: 15px; /* Espaciado interno más pequeño */
+    }
+
+    #button {
+        padding: 8px; /* Menor padding para botones */
+    }
+}
+
+@media (max-width: 480px) {
+    .seccionformulario {
+        padding: 10px; /* Espaciado interno aún más pequeño */
+    }
+
+    #button {
+        padding: 6px; /* Menor padding para botones en pantallas pequeñas */
+    }
+}
+@media (max-width: 600px) {
+    footer {
+      padding: 15px 0; /* Reduce el espaciado interno en móviles */
+      font-size: 14px; /* Ajusta el tamaño de la fuente */
+    }
+  
+    .social-icons img {
+      width: 25px; /* Reduce el tamaño de los iconos sociales */
+      height: 25px;
+    }
+  }
+  
+  /* Media query para pantallas medianas (tabletas) */
+  @media (min-width: 601px) and (max-width: 1024px) {
+    footer {
+      padding: 18px 0; /* Ajusta el espaciado interno en tabletas */
+      font-size: 16px; /* Ajusta el tamaño de la fuente */
+    }
+  
+    .social-icons img {
+      width: 28px; /* Ajusta el tamaño de los iconos sociales */
+      height: 28px;
+    }
+  }
+  
+  /* Media query para pantallas grandes (escritorios) */
+  @media (min-width: 1025px) {
+    footer {
+      padding: 20px 0; /* Mantiene el espaciado interno en escritorios */
+      font-size: 18px; /* Ajusta el tamaño de la fuente */
+    }
+  
+    .social-icons img {
+      width: 30px; /* Mantiene el tamaño de los iconos sociales */
+      height: 30px;
+    }
+  }
+    
+
+
+
